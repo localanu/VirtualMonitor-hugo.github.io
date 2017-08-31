@@ -1,7 +1,7 @@
 language: go
 
 install:
-  - go install github.com/gohugoio/hugo
+  - go get -v github.com/gohugoio/hugo
 
 script:
   - hugo
