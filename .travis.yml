@@ -12,7 +12,7 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: VirtualMonitor-hugo.github.io
+  local_dir: $HOME/gopath/src/github.com/localanu/VirtualMonitor-hugo.github.io
   target_branch: gh-pages
   on:
     branch: master
