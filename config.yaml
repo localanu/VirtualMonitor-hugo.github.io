@@ -1,4 +1,4 @@
-baseURL: VirtualMonitor-hugo.github.io
+baseURL: /VirtualMonitor-hugo.github.io
 disablePathToLower: true
 languageCode: en-us
 title: VirtualMonitor
