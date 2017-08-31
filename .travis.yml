@@ -1,0 +1,18 @@
+language: go
+
+install:
+  - go get github.com/kardianos/govendor
+  - govendor get github.com/gohugoio/hugo
+  - go install github.com/gohugoio/hugo
+
+script:
+  - hugo
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: <name folder website yang dibangun>
+  target_branch: gh-pages
+  on:
+    branch: master
