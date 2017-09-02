@@ -10,6 +10,7 @@ script:
   - hugo
 
 deploy:
+  theme: herring-cove
   provider: pages
   skip_cleanup: true
   local_dir: public
