@@ -7,10 +7,9 @@ install:
   - export PATH=$HOME/bin:$PATH
 
 script:
-  - hugo
+  - hugo --theme=herring-cove
 
 deploy:
-  theme: herring-cove
   provider: pages
   skip_cleanup: true
   local_dir: public
