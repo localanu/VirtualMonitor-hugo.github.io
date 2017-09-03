@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VirtualMonitor</title>
+    <link>https://localanu.github.io/hugo-virtualmonitor/</link>
+    <description>Recent content on VirtualMonitor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 31 Aug 2017 20:15:41 +0700</lastBuildDate>
+    
+	<atom:link href="https://localanu.github.io/hugo-virtualmonitor/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Introduce The Software</title>
+      <link>https://localanu.github.io/hugo-virtualmonitor/VirtualMonitorIntroducing/</link>
+      <pubDate>Thu, 31 Aug 2017 20:15:41 +0700</pubDate>
+      
+      <guid>https://localanu.github.io/hugo-virtualmonitor/VirtualMonitorIntroducing/</guid>
+      <description>VirtualMonitor 0.2.0 Beta released Goto Download Pre-Compiled binary files.
+ Support Windows 2000 to Windows 7. when you run virtual monitor on windows7, it will disable Aero Glass automatically, and it will be enable when virtual monitor exit. You can install or remove Driver with a simple command. Run WinDrvInstaller.exe -i for installing. WinDrvInstaller.exe -u for removing. Support both 32bit and 64bit. test mode support for developer.  if you want do some enhancement for VNC part of VirtualMonitor.</description>
+    </item>
+    
+    <item>
+      <title>Build Instructions</title>
+      <link>https://localanu.github.io/hugo-virtualmonitor/2013/07/20/BuildInstructions/</link>
+      <pubDate>Sat, 20 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://localanu.github.io/hugo-virtualmonitor/2013/07/20/BuildInstructions/</guid>
+      <description>Build on windows Build on Linux
+Build on windows Windows build prerequisites  Install Visual C++ 2010 Express. if you have full edition, that is great. or you can download free Express edition. Click here, If you have other version of Visual C++, instead of 2010. http://www.microsoft.com/express/downloads
+ Microsoft .NET Framework 4 http://www.microsoft.com/en-us/download/details.aspx?id=17718
+ Windows Platform SDK v7.1 http://www.microsoft.com/en-us/download/details.aspx?id=8279
+ Windows Driver Development Kit (WDK) v7.1. http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&amp;amp;id=11800
+ Install Microsoft Visual C++ 2010 Service Pack 1 http://www.</description>
+    </item>
+    
+    <item>
+      <title>Install &amp; Uninstall</title>
+      <link>https://localanu.github.io/hugo-virtualmonitor/2013/07/19/InstallUninstall/</link>
+      <pubDate>Fri, 19 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://localanu.github.io/hugo-virtualmonitor/2013/07/19/InstallUninstall/</guid>
+      <description>For 0.2.0 Beta, Open a command shell,
+ WinDrvInstaller.exe -i for installing. WinDrvInstaller.exe -u for removing.  If you are using Windows vista/Windows7, make sure &amp;ldquo;Run as administrator&amp;rdquo;
+For 32bit version, we did not sign the driver, please ignore signature warning, just click &amp;ldquo;Continue Anyway&amp;rdquo;.
+For 64bit version, Windows will refuse to load and run the driver without signature. and fortunately ReactOS can help us sign the 64bit version.
+ #### Run WinDrvInstaller.</description>
+    </item>
+    
+    <item>
+      <title>Run VirtualMonitor</title>
+      <link>https://localanu.github.io/hugo-virtualmonitor/2013/07/18/RunVirtualMonitor/</link>
+      <pubDate>Thu, 18 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://localanu.github.io/hugo-virtualmonitor/2013/07/18/RunVirtualMonitor/</guid>
+      <description>After you installed driver, you can Run VirtualMonitor. open a command line, change to out/win.x86/release/bin/ directory, enter virtualmonitor.exe. it will create a monitor 800x600x32 by default. currently only support 32bit true color mode. but you can change to any resolution if you want. e.g. with argument -x 200 -y 100, then the resolution is: 200x100x32. the following argument are avalible.
+-x x resolution -y y resolution -a4 listen on specified ipv4 address -p4 listen on specified ipv4 port -a6 listen on specified ipv6 address -p6 listen on specified ipv6 port  Once you run it successful, you will get following output.</description>
+    </item>
+    
+    <item>
+      <title>Mailing List</title>
+      <link>https://localanu.github.io/hugo-virtualmonitor/2013/07/17/MailListing/</link>
+      <pubDate>Wed, 17 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://localanu.github.io/hugo-virtualmonitor/2013/07/17/MailListing/</guid>
+      <description>Mailing Lists Joining a mailing list You need to “subscribe” to a mailing list in order to be able to reply on topics. If you subscribe on a mailing list, you always get a mail when a new topic or reply on a topic was created, so it’d be a good idea to set some filters or use a separate email address.
+To subscribe to the “VirtualMonitor” mailing list, send a mail with whatever content to VirtualMonitor+subscribe@googlegroups.</description>
+    </item>
+    
+  </channel>
+</rss>

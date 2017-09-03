@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Install &amp; Uninstall</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.26" />
+  <link href="" rel="alternate" type="application/rss+xml" title="VirtualMonitor" />
+  <link href="https://localanu.github.io/hugo-virtualmonitor//css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://localanu.github.io/hugo-virtualmonitor//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="https://localanu.github.io/hugo-virtualmonitor//"><p class="navbar-brand">VirtualMonitor</p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="" />
+          <li class="sidebar-brand"><a href="https://localanu.github.io/hugo-virtualmonitor//"><h1 class="brand">VirtualMonitor</h1></a><h3></h3></li>
+          <hr />
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">Install &amp; Uninstall</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2013-07-19</small></p> <hr/>
+   <div class="post">
+     <p>For 0.2.0 Beta, Open a command shell,</p>
+
+<ol>
+<li>WinDrvInstaller.exe -i for installing.</li>
+<li>WinDrvInstaller.exe -u for removing.</li>
+</ol>
+
+<p>If you are using Windows vista/Windows7, make sure &ldquo;Run as administrator&rdquo;</p>
+
+<p><img src="/images/RunAsAdmin.png" alt="Run As administrator" title="Run As administrator" /></p>
+
+<p>For 32bit version, we did not sign the driver, please ignore signature warning, just click &ldquo;Continue Anyway&rdquo;.</p>
+
+<p><img src="/images/Install_Step11.PNG" alt="ignore" title="ignore signature warning" /></p>
+
+<p>For 64bit version, Windows will refuse to load and run the driver without signature. and fortunately <a href="https://www.reactos.org/">ReactOS</a> can help us sign the 64bit version.</p>
+
+<!--
+[Install Driver on windows XP or later](#InstallDriverOnWindows)
+
+[Install Driver on 2000](#InstallDriverOnWindows2000)
+
+[Driver Uninstall on windows](#Remove)
+
+### <a name="InstallDriverOnWindows"></a>
+#### Run WinDrvInstaller.exe, for Windows 7 you have to Run as administrator ####
+
+### <a name="InstallDriverOnWindows1"></a>
+![Click Have Disk](/images/Install_Step6.PNG "Click Have Disk")
+
+#### Browser to location of VirtualMonitor.inf ####
+
+![Open VirtualMonitor.inf](/images/Install_Step7.PNG "Open VirtualMonitor.inf")
+
+#### Click Ok ####
+
+![Click OK](/images/Install_Step8.PNG "Click OK")
+
+#### Next ####
+
+![Next](/images/Install_Step9.PNG "Next")
+
+#### Next ####
+
+![Next2](/images/Install_Step10.PNG "Next")
+
+#### ignore signature warning ####
+
+![ignore](/images/Install_Step11.PNG "ignore signature warning")
+
+
+[Install Driver on windows 2000](#InstallDriverOnWindows2000)
+
+### <a name="InstallDriverOnWindows2000"></a>
+#### Start -> run, enter hdwwiz.cpl ####
+
+![hdwwiz.cpl](/images/Install_Step1.PNG "hdwwiz.cpl")
+
+#### choose yes I have already connected the hardware ####
+
+![Connected](/images/Install_Step2.PNG "Connected")
+
+#### selecte Add a new hardware device, then next ####
+
+![new hardware](/images/Install_Step3.PNG "new hardware device")
+
+#### selecte Install the hardware that i manually selecte from a list(Advanced), then next ####
+
+![manual install](/images/Install_Step4.PNG "manual install")
+
+#### selecte display adapter, then next ####
+
+![Display Adapter](/images/Install_Step5.PNG "Display Adapter")
+
+#### following the rest of step  [next step](#InstallDriverOnWindows1) ####
+
+#### Driver Uninstall ####
+### <a name="Remove"></a>
+#### Right click on My Computer, Choose manage ####
+
+![Manage](/images/Remove_Step1.PNG "computer manage")
+
+#### Choose Device Manager -> Display adapters -> VirtualMonitor Graphics Adapter, right click -> Uninstall ####
+
+![Uninstall](/images/Remove_Step2.PNG "Uninstall")
+-->
+
+   </div>
+ </div>
+
+
+ <a href="https://twitter.com/share" class="twitter-share-button " data-size="small" data-count="none">Tweet</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="https://localanu.github.io/hugo-virtualmonitor/2013/07/20/BuildInstructions/"> Build Instructions</a></li>
+      &nbsp;<li class="next"><a href="https://localanu.github.io/hugo-virtualmonitor/2013/07/18/RunVirtualMonitor/"> Run VirtualMonitor</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2017. All rights reserved. </p>
+    </footer>
+ 
+    <script src="https://localanu.github.io/hugo-virtualmonitor//js/jquery-1.10.2.min.js"></script>
+    <script src="https://localanu.github.io/hugo-virtualmonitor//js/bootstrap.min.js"></script>
+    <script src="https://localanu.github.io/hugo-virtualmonitor//js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://localanu.github.io/hugo-virtualmonitor//js/hc.js"></script>
+</body>
+
+</html>
+

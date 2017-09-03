@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Introduce The Software</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.26" />
+  <link href="" rel="alternate" type="application/rss+xml" title="VirtualMonitor" />
+  <link href="https://localanu.github.io/hugo-virtualmonitor//css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://localanu.github.io/hugo-virtualmonitor//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="https://localanu.github.io/hugo-virtualmonitor//"><p class="navbar-brand">VirtualMonitor</p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="" />
+          <li class="sidebar-brand"><a href="https://localanu.github.io/hugo-virtualmonitor//"><h1 class="brand">VirtualMonitor</h1></a><h3></h3></li>
+          <hr />
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">Introduce The Software</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2017-08-31</small></p> <hr/>
+   <div class="post">
+     
+
+<p>VirtualMonitor 0.2.0 Beta released
+Goto <a href="https://github.com/VirtualMonitor/VirtualMonitor/releases" target="_blank"> Download</a> Pre-Compiled binary files.</p>
+
+<ol>
+<li>Support Windows 2000 to Windows 7. when you run virtual monitor on windows7, it will disable Aero Glass automatically, and it will be enable when virtual monitor exit.</li>
+<li>You can install or remove Driver with a simple command. Run WinDrvInstaller.exe -i for installing. WinDrvInstaller.exe -u for removing.</li>
+<li>Support both 32bit and 64bit.</li>
+<li>test mode support for developer.
+
+<ul>
+<li>if you want do some enhancement for VNC part of VirtualMonitor. you do not care the driver, you can run VirtualMonitor with -dummy. the it will generate generate some random dirty pixels data. then you can debugging it.</li>
+<li>if you want implement a driver on a new OS platform, e.g. Linux. Then fisrt step, you just focus on how to implement the driver, and dump out the frame buffer to a file. then you can run VirtualMonitor with -tf filename. To check your driver is work or not. once it works. it is easy make it works with virtualMonitor. you can download an example ScreenRawCap.bin file <a href="images/ScreenRawCap.bin" target="_blank"> here </a>. then you run virtualmonitor -tf ScreenRawCap.bin. it is 800x600x32.</li>
+</ul></li>
+</ol>
+
+<h2 id="what-is-virtualmonitor">What is VirtualMonitor</h2>
+
+<p>VirtualMonitor is a cross-platform opensource software, it allows you to use compute, tablet, smartphone as a second monitor for your primary computer. The following snapshot is an example of using IPad as a second monitor.
+<img src="/images/IpadAs2ndMonitor.png" alt="Ipad As 2nd Monitor" title="Ipad As 2nd Monitor" /></p>
+
+<p>No extra app needed on your IPad. just run your web browser with HTLM5 support or with Java applet support. So it can be used to support many devices easily.</p>
+
+<p>VirtualMonitor consists following components:</p>
+
+<h3 id="kernel-mode-driver">Kernel mode driver</h3>
+
+<p>Kernel mode driver will Create a Virtual Monitor device in Operating System, it act as a real monitor, it receving pixels content from OS,
+then save those pixels to it own framebuffer.
+Driver is a OS dependent component. We have to write diferent driver for diferent OS.
+currently, There is only XPDM driver implemented for windows.</p>
+
+<h3 id="user-mode-daemon">User mode daemon</h3>
+
+<p>User mode daemon consists two major components:</p>
+
+<ol>
+<li>Driver interface. Comunicate with driver, to read dirty pixels, change resolution. etc.</li>
+<li>VNC Server comunicate with &ldquo;VNC Client&rdquo;, update those dirty pixels data to those device. VirtualMonitor use <a href="http://libvncserver.sourceforge.net">libvncserver</a></li>
+</ol>
+
+<p>Cross-platform is one of the aim of VirtualMonitor. Driver and Driver interface which comunicate to User mode daemon are platform dependent, but all of other code are platform independent. Curently, only a XPDM driver implemented for windows, If you run VirtualMonitor on Linux. there is no VirtualMonitor driver. &ldquo;Dummy&rdquo; driver interface will handle this case. It will not comunicate with real driver, it just generate some random dirty pixels data. it works like this:</p>
+
+<p><img src="/images/VirtualMonitorOnLinux.png" alt="VirtualMonitor On Linux" title="VirtualMonitor On Linux" /></p>
+
+<p>If you look into Dummy Driver interface, you will found it has only few codes and very easy to understand. The purpose of Dummy Driver interface is: Provide a skeleton to show how to comunicate with user mode daemon. So if you want to develop a VirtualMonitor driver for Linux or other platform, then you can focus on the driver side, once your driver works, you can integrate your driver to VirtualMonitor based on Dummy Driver interface.</p>
+
+<p>VirtualMonitor is still in the development stage, the source code is based on <a href="http://www.virtualbox.org">VirtualBox</a>. Why using <a href="http://www.virtualbox.org">VirtualBox</a>. it is great cross-platform opensource software. right now I am only one developper. I have to reuse opensource as possible as I can. And also I hope I can contribute to opensource. VirtualBox has some Guest Addition drivers, one of them is display driver. this driver will create virtual display adapter. When guest OS request to draw something on screen. this driver will store the content. and update dirty pixels data through Guest Host Share Memory Mechanism. I ported this driver works on host OS. and send out dirty pixels to another device through network. right now, still lots of unused code in the source tree. I will cleanup later.</p>
+
+<p>If anyone interesting in VirtualMonitor, Please join me. lets develop a usefull cross-platform opensource software.</p>
+
+<ol>
+<li>Develop WDDM driver for Windows 7, Windows 8. Current XPDM can work on Windows 7 with Non-Aero mode, the Aero Glass interface will not working. I tested it on  32bit version windows7, it is works. for 64bit window7, it isn&rsquo;t work, as we didn&rsquo;t have driver signature. windows will refuse to run this driver.</li>
+<li>Develop driver for Linux</li>
+<li>Current code only support 1 client. Change VNCDisplay.cpp to support mutiple client.</li>
+<li>enhance current XPDM driver, Create mutiple Virtual Monitor Object, then we can extend destop to more than 1 device. VideoPortCreateSecondaryDisplay</li>
+<li>Build a Installer(.msi file) for Windows. and automatic install driver.</li>
+<li>Sign XPDM. hope <a href="http://reactos.org">ReactOS</a> can help on this.</li>
+<li>Testing, report and fix bugs,</li>
+<li>Make VirtualMonitor works with USB, not through networking. Using <a href="http://www.libusb.org/">LibUSB</a>?</li>
+<li>Any other idea or suggestion.</li>
+<li>code cleanup</li>
+</ol>
+
+   </div>
+ </div>
+
+
+ <a href="https://twitter.com/share" class="twitter-share-button " data-size="small" data-count="none">Tweet</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+     
+      &nbsp;<li class="next"><a href="https://localanu.github.io/hugo-virtualmonitor/2013/07/20/BuildInstructions/"> Build Instructions</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2017. All rights reserved. </p>
+    </footer>
+ 
+    <script src="https://localanu.github.io/hugo-virtualmonitor//js/jquery-1.10.2.min.js"></script>
+    <script src="https://localanu.github.io/hugo-virtualmonitor//js/bootstrap.min.js"></script>
+    <script src="https://localanu.github.io/hugo-virtualmonitor//js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://localanu.github.io/hugo-virtualmonitor//js/hc.js"></script>
+</body>
+
+</html>
+

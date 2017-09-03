@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://localanu.github.io/hugo-virtualmonitor/VirtualMonitorIntroducing/</loc>
+    <lastmod>2017-08-31T20:15:41+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://localanu.github.io/hugo-virtualmonitor/2013/07/20/BuildInstructions/</loc>
+    <lastmod>2013-07-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://localanu.github.io/hugo-virtualmonitor/2013/07/19/InstallUninstall/</loc>
+    <lastmod>2013-07-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://localanu.github.io/hugo-virtualmonitor/2013/07/18/RunVirtualMonitor/</loc>
+    <lastmod>2013-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://localanu.github.io/hugo-virtualmonitor/2013/07/17/MailListing/</loc>
+    <lastmod>2013-07-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://localanu.github.io/hugo-virtualmonitor/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://localanu.github.io/hugo-virtualmonitor/post/</loc>
+    <lastmod>2013-07-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://localanu.github.io/hugo-virtualmonitor/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://localanu.github.io/hugo-virtualmonitor/</loc>
+    <lastmod>2017-08-31T20:15:41+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

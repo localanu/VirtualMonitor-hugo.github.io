@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Run VirtualMonitor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.26" />
+  <link href="" rel="alternate" type="application/rss+xml" title="VirtualMonitor" />
+  <link href="https://localanu.github.io/hugo-virtualmonitor//css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://localanu.github.io/hugo-virtualmonitor//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="https://localanu.github.io/hugo-virtualmonitor//"><p class="navbar-brand">VirtualMonitor</p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="" />
+          <li class="sidebar-brand"><a href="https://localanu.github.io/hugo-virtualmonitor//"><h1 class="brand">VirtualMonitor</h1></a><h3></h3></li>
+          <hr />
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">Run VirtualMonitor</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2013-07-18</small></p> <hr/>
+   <div class="post">
+     <p>After you installed driver, you can Run VirtualMonitor. open a command line, change to out/win.x86/release/bin/ directory, enter virtualmonitor.exe. it will create a monitor 800x600x32 by default. currently only support 32bit true color mode. but you can change to any resolution if you want. e.g. with argument -x 200 -y 100, then the resolution is: 200x100x32. the following argument are avalible.</p>
+
+<pre><code>-x x resolution
+-y y resolution
+-a4 listen on specified ipv4 address
+-p4 listen on specified ipv4 port
+-a6 listen on specified ipv6 address
+-p6 listen on specified ipv6 port
+</code></pre>
+
+<p>Once you run it successful, you will get following output.</p>
+
+<pre><code>\\.\DISPLAY2
+Probe XPDM Display Driver Successful
+Update Registry on device mode: Change Successful
+Raw dynamic mode change on device mode: Change Successful
+24/07/2013 14:50:48 Autoprobing TCP port
+24/07/2013 14:50:48 Autoprobing selected TCP port 5900
+24/07/2013 14:50:48 Autoprobing TCP6 port
+24/07/2013 14:50:48 Autoprobing selected TCP6 port 5900
+24/07/2013 14:50:48 Listening for HTTP connections on TCP port 5800
+24/07/2013 14:50:48   URL http://ComputerName:5800
+24/07/2013 14:50:48 Listening for HTTP connections on TCP6 port 5800
+24/07/2013 14:50:48   URL http://ComputerName:5800
+Create VNC Display Successful
+1 Display Intf Object
+</code></pre>
+
+<p>Then you can open web browser with HTML support on your device. connect to: <a href="http://ip:5800">http://ip:5800</a>, then you will see a page:</p>
+
+<p>If the above Java applet does not work, you can also try the new JavaScript-only noVNC viewer. You will need a HTML5-capable browser though.
+Then click the button &ldquo;Click here to connect using noVNC&rdquo;.</p>
+
+   </div>
+ </div>
+
+
+ <a href="https://twitter.com/share" class="twitter-share-button " data-size="small" data-count="none">Tweet</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="https://localanu.github.io/hugo-virtualmonitor/2013/07/19/InstallUninstall/"> Install &amp; Uninstall</a></li>
+      &nbsp;<li class="next"><a href="https://localanu.github.io/hugo-virtualmonitor/2013/07/17/MailListing/"> Mailing List</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2017. All rights reserved. </p>
+    </footer>
+ 
+    <script src="https://localanu.github.io/hugo-virtualmonitor//js/jquery-1.10.2.min.js"></script>
+    <script src="https://localanu.github.io/hugo-virtualmonitor//js/bootstrap.min.js"></script>
+    <script src="https://localanu.github.io/hugo-virtualmonitor//js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://localanu.github.io/hugo-virtualmonitor//js/hc.js"></script>
+</body>
+
+</html>
+
