@@ -1,4 +1,4 @@
-baseURL: https://localanu.github.io/VirtualMonitor-hugo.github.io/
+baseURL: https://localanu.github.io/hugo-virtualmonitor/
 disablePathToLower: true
 languageCode: en-us
 title: VirtualMonitor
